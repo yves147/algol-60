@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "1-fakultaet.h": "c"
+        "1-fakultaet.h": "c",
+        "5-shortest-path.h": "c",
+        "setjmp.h": "c",
+        "cmath": "c",
+        "*.tcc": "c"
     }
 }

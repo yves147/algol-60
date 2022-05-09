@@ -4,10 +4,6 @@ begin
     value N; integer N, P, S, M;
 
     begin
-        comment N := 8
-        P := 5
-        S := 1
-        M := 9999999;
 
         integer array src[1 : P];
         integer array dst[1 : P];
@@ -17,12 +13,12 @@ begin
 
         integer i, j, k, l, q;
 
-        comment for i := 1 step 1 until P do begin
-            outstring(1, "Kante")
-            outinteger(1, i)
-            ininteger(0, src[i])
-            ininteger(0, dst[i])
-            ininteger(0, wgt[i])
+        for i := 1 step 1 until P do begin
+            outstring(1, "Kante");
+            outinteger(1, i);
+            ininteger(0, src[i]);
+            ininteger(0, dst[i]);
+            ininteger(0, wgt[i]);
         end;
 
         for i := 1 step 1 until N do begin
