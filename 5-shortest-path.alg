@@ -30,19 +30,20 @@ begin
             for k := 1 step 1 until P do begin
                 integer u, v, w, o;
                 u := src[k]; v := dst[k]; w := wgt[k];
-                o := rtdst[u] + wgt[k];
+                o := rtdst[u] + w;
                 if rtdst[u] ^= M and o < rtdst[v] then begin
-                    rtdst[v] := rtdst[u] + wgt[k];
+                    rtdst[v] := rtdst[u] + w;
                 end;
             end;
         end;
 
+        comment negative weight cycle check;
         for l := 1 step 1 until P do begin
             integer u, v, w, o;
             u := src[l]; v := dst[l]; w := wgt[l];
-            o := rtdst[u] + wgt[k];
+            o := rtdst[u] + w;
             if (rtdst[u] ^= M and o < dst[v]) then begin
-                outstring(1, "negative\n");
+                comment outstring(1, "negative\n");
             end;
         end;
 
