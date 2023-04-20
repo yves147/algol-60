@@ -12,7 +12,7 @@ begin
     target := 1.0;
     
     comment training / stochastic gradient descent;
-    for epochs := 1 step 1 until 100 do
+    for epochs := 1 step 1 until 100 do begin
         input[1] := rand(0.0, 1.0);
         input[2] := rand(0.0, 1.0);
         
@@ -25,7 +25,7 @@ begin
         weights[1] := weights[1] + error * input[1] * 0.1;
         weights[2] := weights[2] + error * input[2] * 0.1;
         bias := bias + error * 0.1;
-    od;
+    end;
     
     comment test;
     input[1] := 0.5;
